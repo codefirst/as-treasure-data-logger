@@ -11,7 +11,7 @@ ASAKUSA_SATELLITE_ENTRY_POINT = ENV["ASAKUSA_SATELLITE_ENTRY_POINT"]
 ASAKUSA_SATELLITE_API_KEY = ENV["ASAKUSA_SATELLITE_API_KEY"]
 ASAKUSA_SATELLITE_ROOM_ID = ENV["ASAKUSA_SATELLITE_ROOM_ID"]
 REDIS_URL = ENV["REDISTOGO_URL"]
-COUNT = 100
+COUNT = 50
 
 uri = URI.parse(REDIS_URL)
 redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
@@ -44,6 +44,6 @@ loop do
 
   redis.set("since_id", since_id)
 
-  sleep 600
+  sleep 300
 
 end
