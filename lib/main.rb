@@ -38,7 +38,7 @@ loop do
   messages.shift
 
   messages.each do |m|
-    puts "[@heroku.message] " + m.to_json.gsub("\n", "")
+    puts "@[heroku.message] " + m.to_json.gsub("\n", "")
     since_id = m["id"]
   end
 
