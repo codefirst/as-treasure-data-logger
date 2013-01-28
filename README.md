@@ -11,5 +11,5 @@ AsakusaSatellite Treasure Data Logger
     $ heroku config:add ASAKUSA_SATELLITE_ROOM_ID=YOUR_ROOM_ID
     $ redis-cli -h hostname -p port -a password put since_id YOUR_OLDEST_MESSAGE_ID_IN_YOUR_ROOM
     $ git push heroku master
-    $ heroku ps:scale web=0 bot=1
+    $ heroku ps:scale bot=1
 
